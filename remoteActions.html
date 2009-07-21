@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.livequery.js"></script>
+<script type="text/javascript" src="jquery.simplemodal.js"></script>
+<script type="text/javascript" src="remoteActions.js"></script>
+<style type="text/css">
+div {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	margin: 20px 0;
+	color: white;
+}
+#red {
+	background: red;
+}
+#green {
+	background: green;
+}
+#blue {
+	background: blue;
+}
+</style>
+</head>
+
+<body>
+<p>Choose one:</p>
+<input type="radio" name="colors" remoteaction="+red -green -blue" remoteactiontaker="process" />
+<label>Red</label>
+<input type="radio" name="colors" remoteaction="+green -red -blue" remoteactiontaker="process" />
+<label>Green</label>
+<input type="radio" name="colors" remoteaction="+blue -red -green" remoteactiontaker="process" />
+<label>Blue</label><br /><br />
+<input type="button" id="process" value="Process" />
+<div id="red" hide="true">Red Widget</div>
+<div id="green" hide="true">Green Widget</div>
+<div id="blue" hide="true">Blue Widget</div>
+</body>
+</html>
